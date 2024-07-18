@@ -21,5 +21,10 @@ const productSchema = new Schema(
       required: false,
     },
   },
-  {},
+  {
+    timestamps: true,
+    versionKey: false,
+  },
 );
+
+export const Product = model('product', productSchema);
